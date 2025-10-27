@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-    header("Location: ../backend/auth/signin.php?redirect=/web_pupr/backend/data/tambah_data.php");
+    header("Location: /backend/auth/signin.php?redirect=/backend/data/tambah_data.php");
     exit;
 }
 ?>
@@ -176,8 +176,8 @@ if (!isset($_SESSION['user'])) {
 
 <body style="margin-top:80px; margin-left:80px;">
 
-    <?php include "../../partials/header.php"; ?>
-    <?php include "../../partials/sidebar.php"; ?>
+    <?php include "/partials/header.php"; ?>
+    <?php include "/partials/sidebar.php"; ?>
 
     <div class="container">
          
@@ -187,7 +187,7 @@ if (!isset($_SESSION['user'])) {
             <p style="font-size: 11px; margin-top: -10px">*Untuk kolom ID mohon dikosongkan saja saat mengunggah file yang telah ditambahkan</p>
             <div id="accordionContainer">
                 <?php
-                $base_path = "/web_pupr/assets/form";
+                $base_path = "/assets/form";
                 $kelas_subkelas = [
                     "atribut_jalan" => ["cermin_jalan", "kamera_pengawas", "lampu_jalan", "lampu_lalin", "rambu_lalin"],
                     "halte" => ["titik_halte", "jalur_halte"],
@@ -340,5 +340,6 @@ if (!isset($_SESSION['user'])) {
     </script>
 
 </body>
+
 
 </html>
