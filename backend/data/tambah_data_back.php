@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+include_once(__DIR__ . "/../db/koneksi.php");
 
 $kelas_subkelas = [
     "jaringan_jalan" => ["jalan_kota", "jalan_lingkungan", "trotoar"],
@@ -252,3 +252,4 @@ map.on('draw:deleted', function(e){
 </script>
 </body>
 </html>
+
